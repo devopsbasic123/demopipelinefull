@@ -1,8 +1,6 @@
 name: full pipeline
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 
