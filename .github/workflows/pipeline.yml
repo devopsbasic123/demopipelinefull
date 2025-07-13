@@ -1,0 +1,16 @@
+name: full pipeline
+
+on:
+  push:
+    branches: [main]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      binary_path: hello
+    steps:
+     - uses: actions/checkout@v3
+     - name: compile code
+       run: gcc hello.c -o hello
